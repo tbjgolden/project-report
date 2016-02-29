@@ -1,2 +1,0 @@
-# goldenforever.github.io
-Website
