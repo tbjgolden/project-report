@@ -1210,6 +1210,10 @@ nav ul.sub-menu > li:last-child > a {
     animation: overlay .5s ease forwards;
 }
 
+.portfolio-section article {
+    border: 1px solid #999 !important;
+}
+
 @-webkit-keyframes overlay {
     from {
         -webkit-transform: translateY(-0.5em);

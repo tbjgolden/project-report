@@ -1390,5 +1390,5 @@ jQuery(document).ready(function ($) {
     });
 
 
-
+    document.querySelector('#yr').innerHTML = "" + (new Date).getFullYear();
 });
