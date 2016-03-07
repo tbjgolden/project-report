@@ -2943,7 +2943,7 @@ footer .row-content.buffer {
 
 #bottom-footer {
     font-size: 0.667em;
-    padding-top: 10px;
+    padding-top: 10px 10px 0;
 }
 
 
