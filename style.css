@@ -5242,3 +5242,11 @@ footer .row-content.buffer {
         -webkit-text-size-adjust: none;
     }
 }
+
+/* Extras styles */
+
+@media (max-width:80em) {
+    .block h1 {
+        font-size: 1.6em;
+    }
+}
