@@ -75,6 +75,13 @@ a {
     text-decoration: underline;
 }
 
+hr {
+    border: 1px solid rgba(255,255,255,.6);
+    border-width: 1px 0;
+    height: 4px;
+    margin: 40px 10%;
+}
+
 .csstransitions a {
     -webkit-transition: background-color 0.1s linear, color 0.1s linear;
     -moz-transition: background-color 0.1s linear, color 0.1s linear;
@@ -139,6 +146,61 @@ section {
 
 .last-special {
     margin-right: 0% !important;
+}
+
+.block-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #3dab91, #29baa9, #00a995, #29baa9);
+    background-size: 800% 800%;
+    -webkit-animation: pulse 20s ease infinite;
+    -moz-animation: pulse 20s ease infinite;
+    animation: pulse 20s ease infinite;
+}
+
+.row-2 {
+    -moz-animation-delay: 300ms;
+    -webkit-animation-delay: 300ms;
+    animation-delay: 300ms;
+}
+
+.row-3 {
+    -moz-animation-delay: 600ms;
+    -webkit-animation-delay: 600ms;
+    animation-delay: 600ms;
+}
+
+@-webkit-keyframes pulse {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@-moz-keyframes pulse {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+@keyframes pulse {
+    0%{background-position:50% 0%}
+    50%{background-position:51% 100%}
+    100%{background-position:50% 0%}
+}
+
+.block {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.block * {
+    margin: 0;
+    padding: 0 10%;
 }
 
 /*----------------------------------------------------------------
@@ -566,7 +628,7 @@ nav ul.sub-menu > li:last-child > a {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.42);
+    background: rgba(0, 0, 0, 0.55);
 }
 
 #intro .intro-mockup,
@@ -1563,7 +1625,7 @@ footer .meta-social ul li {
 }
 
 .widget.meta-social ul li a i {
-    vertical-align: -15%;
+    vertical-align: middle;
 }
 
 
@@ -2881,6 +2943,7 @@ footer .row-content.buffer {
 
 #bottom-footer {
     font-size: 0.667em;
+    padding-top: 10px;
 }
 
 
@@ -5179,4 +5242,3 @@ footer .row-content.buffer {
         -webkit-text-size-adjust: none;
     }
 }
-      
