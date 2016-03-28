@@ -6,7 +6,7 @@
 
 #### //Supervisor: Alexandra Cristea//
 
-###### -auto-date
+###### {date()}
 
 {print(){break()}}
 
@@ -247,22 +247,5 @@ review	the	related	literature (or the state-of-the-art)?
 </style>
 
 <script>
-    var d = new Date();
-    var day = d.getDate();
-    var month = d.getMonth();
-    var year = d.getFullYear();
-    
-    if (day % 10 == 1) day += "st of ";
-    else if (day % 10 == 2) day += "nd of ";
-    else if (day % 10 == 3) day += "rd of ";
-    else day += "th of ";
-    
-    month = ["January", "February", "March",
-             "April", "May", "June", 
-             "July", "August", "September", 
-             "October", "November", "December"][month] + ", ";
-    
-    $('#-auto-date').children().first().html(day + month + year);
-
     if (window.location.hash.substr(1) == "autoupdate") setTimeout(function(){location.reload(true)}, 2000);
 </script>
