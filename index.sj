@@ -2,6 +2,8 @@
 
 # //Simplifying Web Development//
 
+### {down(5px)\[{emoji()gem}{font(Raleway)*some-js*}\]}
+
 ## Tom Golden
 
 #### //Supervisor: Alexandra Cristea//
@@ -13,6 +15,7 @@
 {donotprint()<hr>}
 
 ## Abstract
+
 This report documents the development of a system to generate webpages without requiring
 a knowledge of web languages. Part of the system involves the creation of a more intuitive
 language than the blend of HTML, CSS and JavaScript along with its compiler and an interface
@@ -29,31 +32,73 @@ total file size.
 
 {contents()I don't get it.}
 
+## Background
+
+### Introduction
+
+The World Wide Web was conceptualised by Tim Berners-Lee in 1980 during his time at the European
+Organization for Nuclear Research (CERN). It would become by far the most popular medium by which the web
+would operate. It standardised how the web would be structured, and the languages by which web page
+resources would be written in.
+
+These languages were created specifically for the purpose of creating web pages. HTML, the backbone of web
+pages, was created as an ISO Standard Generalized Markup Language (SGML). Though it no longer is an SGML
+as of the fifth version, HTML5, it still retains much of the same philosophy.
+
+One of the two postulates for SGML's development is that:
+> *Markup should be rigorous* so that the techniques available for processing rigorously-defined objects
+> like programs and databases can be used for processing documents as well.
+
+When those who programmed for the web were as technically minded as Tim Berners-Lee and his colleagues at
+CERN, or those in the universities that commissioned ARPANET, the first internet implementation, this
+attitude _would_ have been appropriate for the majority of the Internet's contributors. *However*, in the 25+ years
+that have passed since this decision was made, a //much// larger fraction of those who would like to add to
+the web would be better served with a different philosophy.
+
+### Motivation
+
+
+
+## Related Work
+
+## Project Development
+
+## Testing {--of the Project vs its aims--}
+
+## Legal, Social, Ethical and Professional Issues
+
+## Assessment
+
+## Critique {--of the Project vs its aims--}
+
+## Project Review
+
+## Bibliography
+
+## Work Cited
+
+## External Libraries
+
+## Program Instruction
+
 #### Acknowledgements
 
-I received considerable support throughout the course of my project.
+I received considerable support throughout the course of my project, and it would be
+unreasonable to not show my appreciation, so here it is.
 
-My friends: especially Thomas O'Brien, for his unfiltered input and reminding me when
-I should have a break, and Hamish Lacmane, for his help testing my tutorial, but also
-the rest of my friends that gave help and welcome encouragement.
+Thanks to my friends: especially Thomas O'Brien, for his unfiltered input and
+reminding me when I should have a break, and Hamish Lacmane, for his help testing
+my tutorial, but also the rest of my friends that gave help and welcome encouragement.
 
 I'd like to thank my supervisor, Alexandra Cristea, for everything she has
 done this year, providing very interesting feedback; least for all supervising my project.
 
-Adam Chester
+Also Adam Chester, who has helped with advice throughout. His module in first
+year has ultimately led me to take on a web project, and I thank him for it.
 
-Simon Hammond, I would like to thank for his expertise and support this
-year, as well as his remarkable patience answering all my – sometimes silly –
-questions.
+Lastly, I would like to thank Yvie for her help with the tutorial and her support.
 
-Matthew Leeke, for his continued support and encouragement, not only
-this year, but for the past 3 years. Without his help proofreading this report,
-I'm sure it would be far less polished.
-
-Finally, I would like to thank Jordan for all her support this year, I'm sure
-she's learnt more about MPI than she ever wanted to.
-
-
+{--
 ### Optional
 
 #### Appendices:
@@ -216,6 +261,7 @@ review	the	related	literature (or the state-of-the-art)?
 ### You may also wish to include background texts which you have not specifically cited either within the reference section or in a separate bibliography.
 
 ---
+--}
 
 ## References
 [1] Ref
@@ -231,7 +277,9 @@ review	the	related	literature (or the state-of-the-art)?
     body {
         font-family: 'Lora', serif;
     }
-    .__contents__ > ol > li:nth-child(1) {
+    .__contents__ > ol > li:nth-child(1),
+    .__contents__ > ol > li:nth-child(2),
+    .__contents__ > ol > li:nth-child(3) {
     	display: none;
     }
 </style>
