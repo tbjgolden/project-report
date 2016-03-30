@@ -1,8 +1,8 @@
+### {group(){backgroundcolor(#eee)}{emoji()gem}{font(Raleway)*some-js*}}
+
 ## Third Year Project (2015-16)
 
 # //Simplifying Web Development//
-
-### {down(5px)\[{emoji()gem}{font(Raleway)*some-js*}\]}
 
 ## Tom Golden
 
@@ -51,13 +51,48 @@ One of the two postulates for SGML's development is that:
 
 When those who programmed for the web were as technically minded as Tim Berners-Lee and his colleagues at
 CERN, or those in the universities that commissioned ARPANET, the first internet implementation, this
-attitude _would_ have been appropriate for the majority of the Internet's contributors. *However*, in the 25+ years
-that have passed since this decision was made, a //much// larger fraction of those who would like to add to
-the web would be better served with a different philosophy.
+attitude _would_ have been appropriate for the majority of the Internet's contributors. *However*, in the
+25+ years that have passed since this decision was made, a //much// larger fraction of those who would
+like to add to the web would be better served with a different philosophy.
 
 ### Motivation
 
+During my time at Warwick, I have made websites for societies, companies and even the student newspaper.
+I made websites when I was younger with some basic (and now almost entirely deprecated) HTML code but
+most of my learning was done here as a Warwick student, stemming mostly from the first year module,
+Web Development Technologies.
 
+Looking back, the code I wrote was awful and the styling was understandably amateurish. Much of what was
+written didn't even work.
+
+Most of all though, I look back on how much time I spent doing the most basic things. They were much
+easier to explain in unambiguous English than to actually code. Indeed, when the unambiguous English
+was translated into what I thought was code equivalence, it rarely, if ever, worked. Even rarer was
+that same translation to be best practice.
+
+```
+<body>
+    <b style="text-align:center">This bold text isn't centred!</b>
+</body>
+```
+
+```
+<center>This is, but this is not included in HTML5.</center>
+```
+
+{--
+Web development done well typically requires an individual or team with all three of:
+- good-practice of technical expertise
+- good-practice of web design
+- and an understanding of the users.
+
+Traditionally the first two points would be done by experts, often leaving the person who would like
+to commission the website, who typically knows the third point very well, reliant on others to actually
+create the structure of the website.
+--}
+
+It is my aim in this project to reduce how much time and knowledge of web development someone needs to
+develop a website.
 
 ## Related Work
 
@@ -281,6 +316,13 @@ review	the	related	literature (or the state-of-the-art)?
     .__contents__ > ol > li:nth-child(2),
     .__contents__ > ol > li:nth-child(3) {
     	display: none;
+    }
+    .group:nth-of-type(1) {
+    	padding: 15px 20px 15px 10px;
+        border: 5px solid rgba(0,0,0,.1);
+    }
+    .container > .section > h3:nth-of-type(1) {
+        margin: 30px 0;
     }
 </style>
 
