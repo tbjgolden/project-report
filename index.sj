@@ -19,7 +19,7 @@
 This report documents the development of a system to generate webpages without requiring
 a knowledge of web languages. Part of the system involves the creation of a more intuitive
 language than the blend of HTML, CSS and JavaScript along with its compiler and an interface
-for users to develop in it.
+for users to dcentreevelop in it.
 
 Though its main purpose is to make web development simpler for users by way of reducing the
 time taken to write in it and to learn it, it has secondary uses and benefits that include
@@ -80,21 +80,16 @@ that same translation to be best practice.
 <center>This is, but this is not included in HTML5.</center>
 ```
 
-{--
-Web development done well typically requires an individual or team with all three of:
-- good-practice of technical expertise
-- good-practice of web design
-- and an understanding of the users.
-
-Traditionally the first two points would be done by experts, often leaving the person who would like
-to commission the website, who typically knows the third point very well, reliant on others to actually
-create the structure of the website.
---}
-
 It is my aim in this project to reduce how much time and knowledge of web development someone needs to
 develop a website.
 
+### Initial Ideas
+
+The idea for the project came to mind when I discovered Markdown, which is {...}
+
 ## Related Work
+
+There has only been one direct equivalent project, *Strapdown.js*.
 
 ## Project Development
 
@@ -325,7 +320,3 @@ review	the	related	literature (or the state-of-the-art)?
         margin: 30px 0;
     }
 </style>
-
-<script>
-    if (window.location.hash.substr(1) == "autoupdate") setTimeout(function(){location.reload(true)}, 2000);
-</script>
