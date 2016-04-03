@@ -19,7 +19,7 @@
 This report documents the development of a system to generate webpages without requiring
 a knowledge of web languages. Part of the system involves the creation of a more intuitive
 language than the blend of HTML, CSS and JavaScript along with its compiler and an interface
-for users to dcentreevelop in it.
+for users to develop in it.
 
 Though its main purpose is to make web development simpler for users by way of reducing the
 time taken to write in it and to learn it, it has secondary uses and benefits that include
@@ -28,9 +28,9 @@ total file size.
 
 *Keywords* {hspace(10px)} web development, language design, markup language, compiler design, regular language
 
-#### Contents
+## Contents
 
-{contents()I don't get it.}
+{contents(Abstract,Background)}
 
 ## Background
 
@@ -307,11 +307,6 @@ review	the	related	literature (or the state-of-the-art)?
     body {
         font-family: 'Lora', serif;
     }
-    .__contents__ > ol > li:nth-child(1),
-    .__contents__ > ol > li:nth-child(2),
-    .__contents__ > ol > li:nth-child(3) {
-    	display: none;
-    }
     .group:nth-of-type(1) {
     	padding: 15px 20px 15px 10px;
         border: 5px solid rgba(0,0,0,.1);
@@ -320,3 +315,7 @@ review	the	related	literature (or the state-of-the-art)?
         margin: 30px 0;
     }
 </style>
+
+<script>
+    if (window.location.hash.substring(1) == "autoupdate") setTimeout(function(){location.reload(true)}, 2000);
+</script>
