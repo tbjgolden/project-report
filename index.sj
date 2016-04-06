@@ -12,7 +12,7 @@
 
 {print(){break()}}
 
-{donotprint()<hr>}
+{donotprint(){rule()}}
 
 ## Abstract
 
@@ -28,9 +28,17 @@ total file size.
 
 *Keywords* {hspace(10px)} web development, language design, markup language, compiler design, regular language
 
+{print(){break()}}
+
+{donotprint(){vertical(5rem)}}
+
 ## Contents
 
 {contents(Abstract,Background)}
+
+{donotprint(){rule()}}
+
+{print(){break()}}
 
 ## Background
 
@@ -89,7 +97,13 @@ The idea for the project came to mind when I discovered Markdown, which is {...}
 
 ## Related Work
 
-There has only been one direct equivalent project, *Strapdown.js*.
+There has only been one project with a similar objective, *Strapdown.js*.
+
+Strapdown also tries to give a solution for simpler web development by using Markdown as a means to
+generate HTML and also comes with stylesheets designed for Twitter Bootstrap websites.
+
+Looking at the source code:
+-
 
 ## Project Development
 
