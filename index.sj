@@ -102,18 +102,79 @@ There has only been one project with a similar objective, *Strapdown.js*.
 Strapdown also tries to give a solution for simpler web development by using Markdown as a means to
 generate HTML and also comes with stylesheets designed for Twitter Bootstrap websites.
 
-Looking at the source code:
--
+The source code does this:
+> 1. load the //marked// Markdown compiler with default settings
+2. loads the //Google's Prettify// code highlighting module
+3. hides the {escape()<body>} and its content while the compiler is executing
+4. adds a shim to provide the getElementsByClassName function to Internet Explorer
+5. copies the scripts and styles and pastes them in the new page
+6. adds a meta tag that enables a mobile browser to view in a more responsive style
+7. takes the Markdown from the first {escape()<xmp>...</xmp>} or {escape()<textarea>...</textarea>}
+  <span><pre><code>{escape()<xmp theme=\"slate\">}
+  {color(blue)*# Markdown Content*}
+  {escape()</xmp>}</code></pre></span>
+8. compiles the Markdown into HTML
+9. places it into the body
+10. dynamically loads a Bootstrap theme stylesheet based on a theme attribute
+11. unhides the {escape()<body>} and its content
+
+### Before discovery
+
+Before I started development on some-js, I looked for similar projects that had been developed; but
+at that point I could not find any.
+
+During the project I found a link to //Strapdown.js// (on November 3rd, 2015). I had already made a
+partially functional piece of software at that point. As my project has been documented on GitHub
+throughout the project, I have a record of what my project could at that point do.
+
+My project did and still does use //marked// and seeing //Strapdown.js// using the same compiler
+was very encouraging as I had done component research preceding this. Beyond this there were a
+surprising amount of shared steps and features, like adding a {escape()<meta name=\"viewport\">} tag.
+
+There were also some major differences between //Strapdown// and some-js at this point and they were:
+
+- Strapdown used *html tags to house the Markdown* whereas I had just started to load the source code
+  from an external file through `XMLHttpRequest` objects.
+- Strapdown uses *themes*; specifically those designed for Bootstrap. some-js then had a single
+  "vanilla"-type css layout.
+- Strapdown uses the global scope; some-js splits functionality into distinct functions
+- Strapdown includes Google's Prettify syntax highlighting code
+
+...and most importantly, Strapdown had not extended the Markdown compiler.
+
+### After discovery
+
+Difference         | Conclusion
+-------------------|-----------------------------------------------------------------------
+HTML Tag Container | Very buggy. {escape()<xmp>} is deprecated. Full explanation in Project Development.
+(Bootstrap) Themes | Unconvinced, Bootstrap files too bulky. See Component Analysis.
+Global scope       | Bad practice! Nightmare to test. Abstraction helped facilitate a *WYSIWYG editor*.
+Google Prettify    | Slow to execute compared to other highlighters. Large source file too
+
+#### Changes made
+
+The {escape()<textarea>} tag is a potential alternative interface for the users.
+
+The {escape()<xmp>} tag is deprecated in HTML5, and also xmp is a non-descript name
+to even the more experienced web developers (e*X*tensible *M*etadata *P*latform,
+of course). {escape()<textarea>} has neither issue.
+
+It doesn't mitigate the core issue however; if your Markdown contained
+{escape()</textarea>} (which my code for this project at one point did) then you
+will end up with an error somewhere or at the very least, an undesirable result.
+
+Just as Markdown allows gives the right of choice to insert HTML verbatim, I
+shall give the right of choice to use {escape()<textarea>}s.
 
 ## Project Development
 
-## Testing {--of the Project vs its aims--}
+## Testing @@ of the Project vs it-s aims
 
 ## Legal, Social, Ethical and Professional Issues
 
 ## Assessment
 
-## Critique {--of the Project vs its aims--}
+## Critique @@ of the Project vs its aims
 
 ## Project Review
 
@@ -135,177 +196,13 @@ reminding me when I should have a break, and Hamish Lacmane, for his help testin
 my tutorial, but also the rest of my friends that gave help and welcome encouragement.
 
 I'd like to thank my supervisor, Alexandra Cristea, for everything she has
-done this year, providing very interesting feedback; least for all supervising my project.
+done this year, providing very interesting feedback and more generally supervising
+my project.
 
 Also Adam Chester, who has helped with advice throughout. His module in first
 year has ultimately led me to take on a web project, and I thank him for it.
 
 Lastly, I would like to thank Yvie for her help with the tutorial and her support.
-
-{--
-### Optional
-
-#### Appendices:
-
-##### Information referenced in the text that is useful to the readers' understanding but which is too long to include within the actual text
-
-
-##### For example:
-
-
-#### Survey questions administered as part of the work
-
-
-#### Some passages of code
-
-
-#### Diagrams of the architecture
-
-
-#### Do not include substantial amounts of code in an appendix
-
-
-#### Self-Assessment:
-
-##### A brief section entitled "Author's Assessment of the Project"
-
-
-##### Brief summary of what you have achieved.
-
-
-##### Consisting of brief (up to 100 words) answers to each of the following questions:
-
-
-#### What is the (technical) contribution of this project?
-
-
-#### Why should this contribution be considered relevant and important for the subject of your degree?
-
-
-#### How can others make use of the work in this project?
-
-
-#### Why should this project be considered an achievement?
-
-
-#### What are the limitations of this project?
-
-
----
-
-
-## Introduction (containing background and motivational material)
-
-### What is the problem that you are solving?
-
-
-### Why is it important to solve that problem?
-
-
-### Who else has tried to solve this or related problems?
-
-
-### How	does your solution differ from their solution?
-
-
-### Summarise your contributions (novelties	etc) and your results/findings
-
-
-### Organisation of the	report
-
-
-
----
-
-## Review of Literature (or the State-of-the-Art)
-Why is it important (or even necessary) to
-review	the	related	literature (or the state-of-the-art)?
-- Shows	that you are aware of other developments
-- You understand those
-- Are able to critique those
-- Are able to position your work in the context of others' work
-
-*Different ways you can write this*
-
----
-
-## Software/Hardware (or Study) Design
-
-### Overview of your design
-
-
-### Design choices and justification
-
-
-### Design constraints
-
-
-### Detailed design
-
-
-### Beware - Death by UML diagrams!
-
-
----
-
-## Implementation
-
-### Provide some details of the implementation
-
-#### But only what is necessary and sufficient
-
-#### Or what is	novel and unique
-
-### Don't include a dump of the source code in the report, only some snippets if needed
-
-### Screenshots of interface, pictures of hardware setup OK (recommended)
-
-### User guide (highly recommended)
-
----
-
-## Results and Discussion
-
-### Results of your solution (findings)
-
-#### Evidence of the end product (results of your research)
-
-#### Could be in the form of a working software/hardware
-
-### Results with various scenarios
-
-### Comparative results
-
-### Negative results OK?
-
-### Self-critique
-
----
-
-## Conclusions
-
-### Brief summary of the main results/achievements
-
-### A discussion/critique of achievements referring back to the goals
-
-### A consideration of difficulties, limitations and lessons learnt.
-
-### Next steps that would provide a useful extension to your work
-
-### Any further questions that remain to be answered
-
-### A discussion of any legal, social, ethical and professional issues relating to the work undertaken, where applicable
-
-### Citations
-
-### Related work where appropriate in the body of the text
-
-### Reference section should give full references in a consistent style for all works cited
-
-### You may also wish to include background texts which you have not specifically cited either within the reference section or in a separate bibliography.
-
----
---}
 
 ## References
 [1] Ref
@@ -327,6 +224,9 @@ review	the	related	literature (or the state-of-the-art)?
     }
     .container > .section > h3:nth-of-type(1) {
         margin: 30px 0;
+    }
+    ol li:before {
+
     }
 </style>
 
