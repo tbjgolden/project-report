@@ -33,7 +33,7 @@ travel.
 *CHALLENGE - Have a look at the source code...* {emoji()wink} `Ctrl-U`{modify(padding-bottom,2rem)}
                                                                                                         
 <div id="cv" style="max-height:1170px;overflow:hidden;margin-bottom:25px;">
-<div style="height:0;margin:1.5% auto;width:100%;max-width:827px;padding-bottom:141.41%;position:relative;overflow:hidden">
+<div style="height:0;margin:1.5% auto;width:100%;max-width:827px;padding-bottom:129.41%;position:relative;overflow:hidden">
 <iframe id="bae" src="http://docs.google.com/gview?url=http://goldenforever.github.io/Resume.pdf&embedded=true" style="max-height:1170px;position:absolute;width:100%;height:100%;top:0;left:0;" frameborder="0"></iframe>
 </div>
 <style>
