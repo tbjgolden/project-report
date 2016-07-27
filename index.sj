@@ -149,6 +149,7 @@ travel.
         -webkit-filter: grayscale(1);
         -o-filter: grayscale(1);
         filter: grayscale(1);
+        transition: filter .3s ease-in-out;
     }
     img:hover, .emojione:hover {
         -webkit-filter: none;
