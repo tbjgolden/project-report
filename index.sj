@@ -18,7 +18,7 @@ Bonus point: can you work out what language this is? :D
 [some-js Tutorial](some-js-tutorial){hspace(1rem)}
 [Deadlines](Deadlines){hspace(1rem)}
 [Revision](Revision){hspace(1rem)}
-[Marks](Marks)  
+[Marks](Marks)
 {down(.1rem)*Professional portfolio:*}{hspace(1rem)}
 [The&nbsp;Boar](https://theboar.org/){hspace(1rem)}
 [Coshamie](http://coshamie.com){hspace(1rem)}
@@ -30,12 +30,12 @@ Bonus point: can you work out what language this is? :D
 {modify(padding-top,2rem)}Employ me! EU national, US permanent resident. Very flexible with location and
 travel.
 
-CHALLENGE - Have a look at the source code... {emoji()wink} `Ctrl-U`{modify(padding-bottom,2rem)} 
+*CHALLENGE - Have a look at the source code...* {emoji()wink} `Ctrl-U`{modify(padding-bottom,2rem)}
                                                                                                         
-<div id="cv" style="max-height:1170px;overflow:hidden;margin-bottom:25px;">                             
-<div style="height:0;margin:1.5% auto;width:100%;max-width:827px;padding-bottom:141.41%;position:relative;overflow:hidden">                                                                                     
-<iframe id="bae" src="http://docs.google.com/gview?url=http://dcs.warwick.ac.uk/~csunbg/Resume.pdf&embedded=true" style="max-height:1170px;position:absolute;width:100%;height:100%;top:0;left:0;" frameborder="0"></iframe>                                                                                            
-</div>                                                                                                                                                                                                          
+<div id="cv" style="max-height:1170px;overflow:hidden;margin-bottom:25px;">
+<div style="height:0;margin:1.5% auto;width:100%;max-width:827px;padding-bottom:141.41%;position:relative;overflow:hidden">
+<iframe id="bae" src="http://docs.google.com/gview?url=http://dcs.warwick.ac.uk/~csunbg/Resume.pdf&embedded=true" style="max-height:1170px;position:absolute;width:100%;height:100%;top:0;left:0;" frameborder="0"></iframe>
+</div>
 <style>
         code { display: inline-block; white-space: normal; }
         code:first-of-type { margin-right: 135px }
@@ -94,7 +94,7 @@ CHALLENGE - Have a look at the source code... {emoji()wink} `Ctrl-U`{modify(padd
         white-space: pre;
         height: 100%;
         letter-spacing: 3px;
-        transform: scale(.75,.7);       
+        transform: scale(.75,.7);
     }
     .btn:hover { cursor: pointer }
     .btn .fa { transform: rotate(225deg) }
@@ -108,7 +108,7 @@ CHALLENGE - Have a look at the source code... {emoji()wink} `Ctrl-U`{modify(padd
     @keyframes mymove {
         0%   {height: 0;}
         100% {height: 6rem;}
-    } 
+    }
     @media (max-width: 700px) {
         /* Chrome, Safari, Opera */
         @-webkit-keyframes mymove {
@@ -143,7 +143,7 @@ CHALLENGE - Have a look at the source code... {emoji()wink} `Ctrl-U`{modify(padd
     }
     @media (max-width: 380px) {
         .btn { display: none; }
-        .menu { display: block; }        
+        .menu { display: block; }
     }
     img, .emojione {
         -webkit-filter: grayscale(1);
