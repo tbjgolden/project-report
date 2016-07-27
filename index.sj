@@ -176,5 +176,8 @@ travel.
           height: auto !important;
           width: 140px
         }
+        #cv {
+            margin-bottom: 0 !important;
+        }
     }
 </style>
