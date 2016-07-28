@@ -4,23 +4,22 @@
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
   <script>
     function defer(func, str) {
-      if (eval(str)) {
+      if (!eval(str)) {
         setTimeout(function() {defer(func, str)}, 4);
       } else func();
     }
     
-    var stillgoing = true;
+    var done = false;
     $.get('details', function() {
       $('body').html('<hr><h1>Blog Post</h1>'+$('body').html());
-      stillgoing = false;
+      stillgoing = true;
     });
     
     defer(
       function() {
-        ''
         $('body').html($('body').html()+'<hr>');
-      }
-    , 'stillgoing');
+      },
+    'stillgoing');
   </script>
   <body>
   </body>
