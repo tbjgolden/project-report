@@ -12,15 +12,7 @@
     var done = false;
     $.get('details', function(data) {
       var post = JSON.parse(data);
-      $('body').html('<hr><article><h1>'+post.title+'</h1><main><script async>
-        var content = "";
-        $.get(post.url, function(data) {
-          content = data;
-        });
-        defer(function(args) {
-          console.log(args[0]);
-        }, "content", [this])
-      </script></main></article>'+$('body').html());
+      $('body').html('<hr><article><h1>'+post.title+'</h1><main><script async>var content = "";$.get(post.url,function(data){content = data;});defer(function(args){console.log(args[0]);}, "content", [this])</sc'+'ript></main></article>'+$('body').html());
       done = true;
     });
     
