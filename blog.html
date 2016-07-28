@@ -6,7 +6,7 @@
     function defer(func, str) {
       if (eval(str)) {
         setTimeout(function() {defer(func, str)}, 4);
-      } else return;
+      } else func();
     }
     
     var stillgoing = true;
@@ -17,6 +17,7 @@
     
     defer(
       function() {
+        ''
         $('body').html($('body').html()+'<hr>');
       }
     , 'stillgoing');
