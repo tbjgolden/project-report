@@ -12,13 +12,19 @@
     var done = false;
     $.get('details', function(data) {
       var post = JSON.parse(data);
-      $('body').html('<hr><h1>'+post.title+'</h1><h2>'+post.url+'</h2>'+$('body').html());
+      $('body').html('<hr><h1>'+post.title+'</h1><div class="post"><article url="'+post.url+'"></article></div>'+$('body').html());
       done = true;
     });
     
     defer(
       function() {
         $('body').html($('body').html()+'<hr>');
+        var articles = $('article');
+        for (var i=0; i<articles.length; i++) {
+          $.get(articles.eq(i).attr('url'), function(data) {
+            articles.eq(i).html(data);
+          });
+        }
       },
     'done');
   </script>
