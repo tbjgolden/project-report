@@ -48,6 +48,7 @@
                    content = data;
                  });
                  defer(function (args) {
+                   console.log(args[0]);
                    document.getElementById('main'+args[0]).innerHTML = content;
                  }, "content", ["`+j+`"]);
                </sc`+`ript>
