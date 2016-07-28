@@ -33,21 +33,6 @@
          </article>`+$(`body`).html());
       done = true;
     });
-    
-    defer(
-      function() {
-        $('body').html($('body').html()+'<hr>');
-        var articles = $('article');
-        for (var i=0; i<articles.length; i++) {
-          
-          $.get(articles.eq(i).attr('url'), function(data) {
-            console.log(articles.eq(i).attr('url'));
-            console.log(data);
-            articles.eq(i).html(data);
-          });
-        }
-      },
-    'done');
   </script>
   <body>
   </body>
