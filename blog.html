@@ -3,16 +3,24 @@
   <title>Blog</title>
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
   <script>
-    function defer(func, str) {
+    function defer(func, str, args) {
       if (!eval(str)) {
-        setTimeout(function() {defer(func, str)}, 4);
-      } else func();
+        setTimeout(function() {defer(func, str, args)}, 4);
+      } else func(args);
     }
     
     var done = false;
     $.get('details', function(data) {
       var post = JSON.parse(data);
-      $('body').html('<hr><h1>'+post.title+'</h1><div class="post"><article url="'+post.url+'"></article></div>'+$('body').html());
+      $('body').html('<hr><article><h1>'+post.title+'</h1><main><script async>
+        var content = "";
+        $.get(post.url, function(data) {
+          content = data;
+        });
+        defer(function(args) {
+          console.log(args[0]);
+        }, "content", [this])
+      </script></main></article>'+$('body').html());
       done = true;
     });
     
@@ -22,11 +30,11 @@
         var articles = $('article');
         for (var i=0; i<articles.length; i++) {
           
-          $.get(articles.eq(i).attr('url'), eval(`function(data) {
+          $.get(articles.eq(i).attr('url'), function(data) {
             console.log(articles.eq(i).attr('url'));
             console.log(data);
-            articles.eq(`+i+`).html(data);
-          }`));
+            articles.eq(i).html(data);
+          });
         }
       },
     'done');
