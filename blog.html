@@ -30,7 +30,6 @@
       else return day+"th";
     }
     
-    var count = 0;
     $.get('details', function(data) {
       var posts = JSON.parse(data);
       for (var j=0; j<posts.length; j++) {
@@ -39,7 +38,7 @@
           `<article>
              <h1>`+post.title+`</h1>
              <h3>`+toMonthStr(post.date[1])+` `+toOrdStr(post.date[0])+`, `+post.date[2]+`</h3>
-             <main id="main`+count+`">
+             <main id="main`+j+`">
                <script async>
                  var content = "";
                  $.get("`+post.url+`", function (data) {
@@ -47,7 +46,7 @@
                  });
                  defer(function (args) {
                    document.getElementById('main'+args[0]).innerHTML = content;
-                 }, "content", ["`+(count++)+`"]);
+                 }, "content", ["`+j+`"]);
                </sc`+`ript>
              </main>
            </article>`+$(`body`).html());
