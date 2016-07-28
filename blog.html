@@ -25,7 +25,7 @@
                
                defer(function (args) {
                  console.log(args[0]);
-               }, "content", [eval('this.parentNode')])
+               }, "content", [this.parentNode])
              </sc`+`ript>
            </main>
          </article>`+$(`body`).html());
