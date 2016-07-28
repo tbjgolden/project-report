@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <title>Blog</title>
+  <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
+  <script>
+    function defer(func, str) {
+      if (eval(str)) defer(func, str) else return;
+    }
+    
+    var stillgoing = true;
+    var request = $.ajax({
+      url: "details",
+      cache: false
+    });
+    request.done(function( msg ) {
+      $('body').html($('body').html()+'<hr><h1><strong>Blog Post</strong></h1>' + msg);
+      stillgoing = false;
+    });
+    request.fail(function( jqXHR, textStatus ) {
+      alert( "Request failed: " + textStatus );
+      stillgoing = false;
+    });
+    
+    defer(
+      function() {
+        $('body').html($('body').html()+'<hr>');
+      }
+    , 'stillgoing');
+  </script>
+  <body>
+  </body>
+</html>
