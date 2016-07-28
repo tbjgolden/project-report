@@ -25,7 +25,7 @@
                defer(function (args) {
                  console.log(args[0]);
                  console.log(content);
-               }, "content", [eval("this")]);
+               }, "content", [eval("document.currentScript")]);
              </sc`+`ript>
            </main>
          </article>`+$(`body`).html());
