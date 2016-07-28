@@ -4,7 +4,7 @@
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
   <script>
     function defer(func, str, args) {
-      if (!eval(str)) {
+      if (!eval('false||'+str)) {
         setTimeout(function() {defer(func, str, args)}, 4);
       } else func(args);
     }
