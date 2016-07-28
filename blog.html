@@ -5,7 +5,7 @@
   <script>
     function defer(func, str) {
       if (eval(str)) {
-        defer(func, str) 
+        setTimeout(function() {defer(func, str)}, 4);
       } else return;
     }
     
