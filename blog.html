@@ -11,8 +11,9 @@
     
     var count = 0;
     $.get('details', function(data) {
-      var post = JSON.parse(data);
-      for (var j=0; j<post.length; j++) {
+      var posts = JSON.parse(data);
+      for (var j=0; j<posts.length; j++) {
+        var post = posts[j];
         $('body').html(
           `<article>
              <h1>`+post.title+`</h1>
