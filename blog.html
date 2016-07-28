@@ -22,6 +22,8 @@
         var articles = $('article');
         for (var i=0; i<articles.length; i++) {
           $.get(articles.eq(i).attr('url'), function(data) {
+            console.log(articles.eq(i).attr('url'));
+            console.log(data);
             articles.eq(i).html(data);
           });
         }
