@@ -13,14 +13,14 @@
     $.get('details', function(data) {
       var post = JSON.parse(data);
       $('body').html('<hr><h1>'+post.title+'</h1><h2>'+post.url+'</h2>'+$('body').html());
-      stillgoing = true;
+      done = true;
     });
     
     defer(
       function() {
         $('body').html($('body').html()+'<hr>');
       },
-    'stillgoing');
+    'done');
   </script>
   <body>
   </body>
