@@ -10,16 +10,8 @@
     }
     
     var stillgoing = true;
-    var request = $.ajax({
-      url: "details",
-      cache: false
-    });
-    request.done(function( msg ) {
-      $('body').html($('body').html()+'<hr><h1><strong>Blog Post</strong></h1>' + msg);
-      stillgoing = false;
-    });
-    request.fail(function( jqXHR, textStatus ) {
-      alert( "Request failed: " + textStatus );
+    $.get('details', function() {
+      $('body').html('<hr><h1>Blog Post</h1>'+$('body').html());
       stillgoing = false;
     });
     
