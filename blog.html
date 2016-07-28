@@ -10,8 +10,9 @@
     }
     
     var done = false;
-    $.get('details', function() {
-      $('body').html('<hr><h1>Blog Post</h1>'+$('body').html());
+    $.get('details', function(data) {
+      var post = JSON.parse(data);
+      $('body').html('<hr><h1>'+post.title+'</h1><h2>'+post.url+'</h2>'+$('body').html());
       stillgoing = true;
     });
     
