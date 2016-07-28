@@ -9,22 +9,22 @@
       } else func(args);
     }
     
-    var done = false;
+    var done = false, count = 0;
     $.get('details', function(data) {
       var post = JSON.parse(data);
       $('body').html(
         `<hr>
          <article>
            <h1>`+post.title+`</h1>
-           <main>
+           <main id="main`+count+`">
              <script async>
                var content = "";
                $.get("`+post.url+`", function (data) {
                  content = data;
                });
                defer(function (args) {
-                 args[0].innerHTML = '</scri'+'pt>' + content + '<scri'+'pt>';
-               }, "content", [eval("document.currentScript")]);
+                 document.getElementById('main'+args[0]).innerHTML = content;
+               }, "content", ["`+(count++)+`"]);
              </sc`+`ript>
            </main>
          </article>`+$(`body`).html());
