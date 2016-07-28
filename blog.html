@@ -23,6 +23,7 @@
                  content = data;
                });
                defer(function (args) {
+                 console.log(args[0]);
                  args[0].parentNode.innerHTML = content;
                }, "content", [eval("document.currentScript")]);
              </sc`+`ript>
