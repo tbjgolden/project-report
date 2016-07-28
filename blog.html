@@ -44,18 +44,18 @@
              <main id="main`+j+`">
                <script async>
                  (function() {
-                 var content = "";
+                 document.currentScript.content = "";
                  $.get({
                    url: "`+post.url+`", 
                    success: function (data) {
-                     content = [this.index, data];
+                     document.currentScript.content = [this.index, data];
                    },
                    cache: false,
                    index: `+j+`
                  });
                  defer(function () {
-                   document.getElementById('main'+content[0]).innerHTML = content[1];
-                 }, "content");
+                   document.getElementById('main'+document.currentScript.content[0]).innerHTML = document.currentScript.content[1];
+                 }, "document.currentScript.content");
                  })();
                </sc`+`ript>
              </main>
