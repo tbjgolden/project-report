@@ -1,7 +1,4 @@
 [
 {"title": "Post 1", "url": "1.html", "date": [28, 7, 2016], "tags": []},
-{"title": "Post 2", "url": "2.html", "date": [28, 7, 2016], "tags": []},
-{"title": "Post 3", "url": "3.html", "date": [28, 7, 2016], "tags": []},
-{"title": "Post 4", "url": "4.html", "date": [28, 7, 2016], "tags": []},
-{"title": "Post 5", "url": "5.html", "date": [28, 7, 2016], "tags": []}
+{"title": "Post 2", "url": "2.html", "date": [28, 7, 2016], "tags": []}
 ]
