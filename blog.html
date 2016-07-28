@@ -8,6 +8,27 @@
         setTimeout(function() {defer(func, str, args)}, 4);
       } else func(args);
     }
+    function toMonthStr(month) {
+      if (month == 1) return "January";
+      else if (month == 2) return "February";
+      else if (month == 3) return "March";
+      else if (month == 4) return "April";
+      else if (month == 5) return "May";
+      else if (month == 6) return "June";
+      else if (month == 7) return "July";
+      else if (month == 8) return "August";
+      else if (month == 9) return "September";
+      else if (month == 10) return "October";
+      else if (month == 11) return "November";
+      else if (month == 12) return "December";
+    }
+    function toOrdStr(day) {
+      if (day%100 > 10 && day%100 < 14) return day+"th";
+      else if (day%10 == 1) return day+"st";
+      else if (day%10 == 2) return day+"nd";
+      else if (day%10 == 3) return day+"rd";
+      else return day+"th";
+    }
     
     var count = 0;
     $.get('details', function(data) {
@@ -17,6 +38,7 @@
         $('body').html(
           `<article>
              <h1>`+post.title+`</h1>
+             <h3>`+toMonthStr(post.date[1])+` `toOrdStr(post.date[0])+`, `+post.date[2]+`</h3>
              <main id="main`+count+`">
                <script async>
                  var content = "";
