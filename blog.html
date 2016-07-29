@@ -47,7 +47,7 @@
       var posts = JSON.parse(data);
       for (var j=0; j<Math.min((!parseInt(getParam('posts'))?5:parseInt(getParam('posts'))),posts.length); j++) {
         var post = posts[j];
-        $('body').html(
+        $('section').html(
           `<article>
              <h1>`+post.title+`</h1>
              <h3>`+toMonthStr(post.date[1])+` `+toOrdStr(post.date[0])+`, `+post.date[2]+`</h3>
@@ -93,5 +93,15 @@
     }
   </style>
   <body>
+    <header>
+      <article>
+        <main>
+          Stuff here
+        </main>
+      </article>
+    </header>
+    <section>
+      
+    </section>
   </body>
 </html>
