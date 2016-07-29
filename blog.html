@@ -30,12 +30,22 @@
       else return day+"th";
     }
     
+    function getParam(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    
     $.get({
       url: 'details',
       cache: false,
       success: function(data) {
       var posts = JSON.parse(data);
-      for (var j=0; j<posts.length; j++) {
+      for (var j=0; j<Math.min((!parseInt(getParam('posts'))?5:parseInt(getParam('posts'))),posts.length); j++) {
         var post = posts[j];
         $('body').html(
           `<article>
