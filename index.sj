@@ -14,11 +14,11 @@ Bonus point: can you work out what language this is? :D
 
 <div class="menu">
 {down(.1rem)*Projects:*}{hspace(1rem)}
-[some-js](some-js){hspace(1rem)}
-[some-js Tutorial](some-js-tutorial){hspace(1rem)}
-[Deadlines](Deadlines){hspace(1rem)}
-[Revision](Revision){hspace(1rem)}
-[Marks](Marks)  
+[some-js](http://dcs.warwick.ac.uk/~csunbg/some-js){hspace(1rem)}
+[some-js Tutorial](http://dcs.warwick.ac.uk/~csunbg/some-js-tutorial){hspace(1rem)}
+[Deadlines](http://dcs.warwick.ac.uk/~csunbg/Deadlines){hspace(1rem)}
+[Revision](http://dcs.warwick.ac.uk/~csunbg/Revision){hspace(1rem)}
+[Marks](http://dcs.warwick.ac.uk/~csunbg/Marks)  
 {down(.1rem)*Professional portfolio:*}{hspace(1rem)}
 [The&nbsp;Boar](https://theboar.org/){hspace(1rem)}
 [Coshamie](http://coshamie.com){hspace(1rem)}
