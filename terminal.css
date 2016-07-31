@@ -3,6 +3,9 @@ x-screen {
   font-weight: bold;
   font-family: "Anonymous Pro", "Roboto Mono", "Noto Mono", monospace !important;
 }
+html {
+  background: black;
+}
 body {
   transform: scale(0.94, 1) translateX(-3.191485%);
   width: 106.38297% !important;
