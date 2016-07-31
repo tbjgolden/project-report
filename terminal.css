@@ -4,7 +4,7 @@ x-screen {
   font-family: "Anonymous Pro", "Roboto Mono", "Noto Mono", monospace !important;
 }
 html {
-  background: black;
+  background-color: black !important;
 }
 body {
   transform: scale(0.94, 1) translateX(-3.191485%);
