@@ -3,11 +3,12 @@ x-screen {
   font-weight: bold;
   font-family: "Anonymous Pro", "Roboto Mono", "Noto Mono", monospace !important;
 }
-html {
-  margin: 10px;
-}
 body {
   transform: scale(0.94, 1) translateX(-3.191485%);
   width: 106.38297% !important;
   text-shadow: 1px 0.5px 0 rgb(84, 84, 84);
+  padding: 10px
+}
+::-webkit-scrollbar { 
+    display: none; 
 }
