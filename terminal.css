@@ -2,13 +2,13 @@
 x-screen { /* This is the element which contains the lines */
   font-weight: bold;
   font-family: "Anonymous Pro", "Roboto Mono", "Noto Mono", monospace !important;
+  background: radial-gradient(#666, #444, #222, #000, #000);
 }
 x-row { /* The elements for each line; they directly contain the text */
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
   text-shadow: 0.5px 0.5px 0 rgba(255,255,255,0.4);
-  background: radial-gradient(#666, #444, #222, #000, #000);
 }
 ::-webkit-scrollbar {
   opacity: 0;
