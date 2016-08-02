@@ -13,3 +13,6 @@ body {
 ::-webkit-scrollbar {
   opacity: 0;
 }
+.cursor-node {
+  opacity: 1 !important;
+}
