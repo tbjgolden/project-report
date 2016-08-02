@@ -5,10 +5,10 @@ x-screen { /* This is the element which contains the lines */
 }
 x-row { /* The elements for each line; they directly contain the text */
     box-sizing: border-box;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.4);
 }
 body {
-  text-shadow: 0.5px 0.5px 0 rgba(255,255,255,0.2);
+  text-shadow: 0.5px 0.5px 0 rgba(255,255,255,0.4);
 }
 ::-webkit-scrollbar {
   opacity: 0;
