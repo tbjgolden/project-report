@@ -1,8 +1,12 @@
-@import https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700;
-x-screen {
+@import https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700; /* Import a Google font */
+x-screen { /* This is the element which contains the lines */
   font-weight: bold;
   font-family: "Anonymous Pro", "Roboto Mono", "Noto Mono", monospace !important;
 }
-::-webkit-scrollbar { 
-    opacity: 0; 
+x-row { /* The elements for each line; they directly contain the text */
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+body {
+  text-shadow: 0.5px 0.5px 0 rgba(255,255,255,0.2);
 }
