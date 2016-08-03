@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "a"
+git add *
+echo "b"
+git commit -m '$@'
+echo "c"
+git push
+echo "d"
