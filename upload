@@ -2,7 +2,7 @@
 echo "a"
 git add *
 echo "b"
-git commit -m '$@'
+git commit -m "$1"
 echo "c"
 git push
 echo "d"
