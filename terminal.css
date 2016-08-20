@@ -8,6 +8,7 @@ x-row { /* The elements for each line; they directly contain the text */
   box-sizing: border-box;
 }
 body {
+  color: rgba(180, 180, 180, 0.8);
   text-shadow: 0px 0px 0.5px;
 }
 ::-webkit-scrollbar {
